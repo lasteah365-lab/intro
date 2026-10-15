@@ -16,7 +16,7 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,-apple-system,"Segoe
 .b1{width:60vmax;height:60vmax;background:var(--a);top:-20vmax;left:-15vmax}
 .b2{width:50vmax;height:50vmax;background:var(--b);bottom:-18vmax;right:-12vmax;animation-delay:-9s}
 @keyframes drift{to{transform:translate(8vmax,6vmax) scale(1.15)}}
-.float{position:fixed;z-index:-1;font-weight:700;color:rgba(255,255,255,.07);font-size:clamp(2rem,9vw,5rem);white-space:nowrap;animation:fl 14s ease-in-out infinite alternate}
+.float{position:fixed;z-index:-1;font-weight:700;color:rgba(255,255,255,.07);font-size:clamp(1.6rem,7vw,3.5rem);white-space:nowrap;animation:fl 14s ease-in-out infinite alternate}
 .f1{top:12%;left:4%}.f2{top:55%;right:4%;animation-delay:-7s}
 @keyframes fl{to{transform:translateY(-30px) rotate(-3deg)}}
 main{max-width:640px;margin:0 auto;padding:20px 16px 48px}
@@ -53,7 +53,7 @@ html[lang=ru] [data-l=ru],html[lang=ko] [data-l=ko]{display:revert}
 </head>
 <body>
 <div class="blob b1"></div><div class="blob b2"></div>
-<div class="float f1">안녕</div><div class="float f2">Привет</div>
+<div class="float f1">안녕하세요</div><div class="float f2">Здравствуйте</div>
 <main>
   <div class="lang">
     <button data-set="ko" aria-pressed="true">한국어</button>
