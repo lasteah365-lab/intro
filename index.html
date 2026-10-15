@@ -7,11 +7,11 @@
 <title>Medintseva Yulia — RU⇄KR</title>
 <meta name="description" content="Русско-корейский перевод и поиск партнёров / 한-러 통번역 · 현지 파트너 발굴">
 <style>
-:root{--bg:#0b1020;--fg:#f4f6ff;--mute:#aab3d6;--a:#5b8cff;--b:#ff5b8c;--card:rgba(255,255,255,.07)}
+:root{--bg:#0b1020;--fg:#f4f6ff;--mute:#dfe5ff;--a:#5b8cff;--b:#ff5b8c;--card:rgba(14,20,45,.82)}
 *{box-sizing:border-box;margin:0}
 body{font-family:system-ui,-apple-system,"Segoe UI","Malgun Gothic",sans-serif;background:var(--bg);color:var(--fg);min-height:100vh;overflow-x:hidden;line-height:1.55}
 /* motion: drifting blobs + floating words */
-.blob{position:fixed;border-radius:50%;filter:blur(70px);opacity:.55;z-index:-1;animation:drift 18s ease-in-out infinite alternate}
+.blob{position:fixed;border-radius:50%;filter:blur(70px);opacity:.32;z-index:-1;animation:drift 18s ease-in-out infinite alternate}
 .b1{width:60vmax;height:60vmax;background:var(--a);top:-20vmax;left:-15vmax}
 .b2{width:50vmax;height:50vmax;background:var(--b);bottom:-18vmax;right:-12vmax;animation-delay:-9s}
 @keyframes drift{to{transform:translate(8vmax,6vmax) scale(1.15)}}
@@ -28,10 +28,13 @@ header{text-align:center;padding:48px 0 28px}
 .logo i:nth-child(3){animation-delay:-1.5s}
 @keyframes swap{50%{transform:translateY(-6px);color:var(--b)}}
 h1{font-size:clamp(1.8rem,7vw,2.6rem);line-height:1.2}
-.sub{color:var(--mute);margin-top:12px}
-.card{background:var(--card);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:18px 20px;margin-top:14px;backdrop-filter:blur(8px)}
-.card h2{font-size:1.1rem;margin-bottom:4px}
-.card p{color:var(--mute);font-size:.95rem}
+.sub{color:var(--mute);font-size:1.05rem;margin-top:12px}
+.card{position:relative;background:var(--card);border:1px solid rgba(255,255,255,.18);border-left:5px solid var(--b);border-radius:18px;padding:20px 22px 20px 74px;margin-top:16px;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .25s}
+.card:hover{transform:translateY(-3px)}
+.card::before{content:attr(data-i);position:absolute;left:18px;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:1.3rem;background:linear-gradient(135deg,var(--a),var(--b));animation:pu 3s ease-in-out infinite}
+@keyframes pu{50%{transform:translateY(-50%) scale(1.1)}}
+.card h2{font-size:1.2rem;margin-bottom:4px;color:#fff}
+.card p{color:var(--mute);font-size:1rem}
 .contact{display:grid;gap:10px;margin-top:22px}
 .btn{display:block;text-align:center;text-decoration:none;color:#fff;font-weight:600;padding:15px;border-radius:14px;background:linear-gradient(90deg,var(--a),var(--b));background-size:200% 100%;animation:sh 5s linear infinite alternate}
 .btn.alt{background:var(--card);border:1px solid rgba(255,255,255,.25)}
@@ -57,11 +60,11 @@ html[lang=ru] [data-l=ru],html[lang=ko] [data-l=ko]{display:revert}
     <p class="sub"><span data-l="ru">Устный и письменный перевод русский ⇄ корейский. Поиск надёжных партнёров.</span><span data-l="ko">한국어 ⇄ 러시아어 통번역, 신뢰할 수 있는 현지 파트너 발굴.</span></p>
   </header>
 
-  <section class="card rv"><h2><span data-l="ru">Устный и письменный перевод</span><span data-l="ko">통역 · 번역</span></h2>
+  <section class="card rv" data-i="🗣️"><h2><span data-l="ru">Устный и письменный перевод</span><span data-l="ko">통역 · 번역</span></h2>
     <p><span data-l="ru">Переговоры, встречи, выставки, документы и договоры.</span><span data-l="ko">협상, 미팅, 전시회 통역과 문서·계약서 번역.</span></p></section>
-  <section class="card rv"><h2><span data-l="ru">Поиск партнёров в России и СНГ</span><span data-l="ko">현지 파트너 발굴</span></h2>
+  <section class="card rv" data-i="🤝"><h2><span data-l="ru">Поиск партнёров в России и СНГ</span><span data-l="ko">현지 파트너 발굴</span></h2>
     <p><span data-l="ru">Находим и проверяем поставщиков, дистрибьюторов и покупателей.</span><span data-l="ko">공급사, 유통사, 바이어를 찾고 검증해 연결합니다.</span></p></section>
-  <section class="card rv"><h2><span data-l="ru">Сопровождение</span><span data-l="ko">출장·행사 동행</span></h2>
+  <section class="card rv" data-i="✈️"><h2><span data-l="ru">Сопровождение</span><span data-l="ko">출장·행사 동행</span></h2>
     <p><span data-l="ru">Поддержка в командировках и на мероприятиях на месте.</span><span data-l="ko">현지 출장과 행사에서 현장 지원.</span></p></section>
 
   <div class="contact rv">
