@@ -40,9 +40,9 @@ h1{font-size:clamp(1.8rem,7vw,2.6rem);line-height:1.2}
 .btn{display:block;text-align:center;text-decoration:none;color:#fff;font-weight:600;padding:15px;border-radius:14px;background:linear-gradient(90deg,var(--a),var(--b));background-size:200% 100%;animation:sh 5s linear infinite alternate}
 .btn.alt{background:var(--card);border:1px solid rgba(255,255,255,.25)}
 @keyframes sh{to{background-position:100% 0}}
-.row{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:8px 8px 8px 16px}
-.num{flex:1;text-align:center;font-weight:600;min-width:0}
-.mini{font:inherit;font-weight:600;color:#fff;text-decoration:none;border:0;border-radius:10px;padding:10px 14px;cursor:pointer;background:linear-gradient(90deg,var(--a),var(--b))}
+.num{animation:none;cursor:default}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:-2px}
+.mini{font:inherit;font-weight:600;color:#fff;text-decoration:none;text-align:center;border:0;border-radius:14px;padding:14px;cursor:pointer;background:linear-gradient(90deg,var(--a),var(--b))}
 button.mini{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3)}
 .rv{opacity:0;transform:translateY(24px);transition:.7s}
 .rv.on{opacity:1;transform:none}
@@ -75,8 +75,8 @@ html[lang=ru] [data-l=ru],html[lang=ko] [data-l=ko]{display:revert}
   <div class="contact rv">
     <a class="btn" href="https://t.me/+821066235716">Telegram</a>
     <a class="btn" href="https://wa.me/821066235716">WhatsApp</a>
-    <div class="row">
-      <span class="num">+82 10-6623-5716</span>
+    <div class="btn alt num">+82 10-6623-5716</div>
+    <div class="pair">
       <a class="mini" href="tel:+821066235716"><span data-l="ko">통화</span><span data-l="ru">Звонок</span></a>
       <button class="mini" id="save" type="button"><span data-l="ko">저장</span><span data-l="ru">Сохранить</span></button>
     </div>
