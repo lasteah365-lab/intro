@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medintseva Yulia — RU⇄KR</title>
+<meta name="description" content="Русско-корейский перевод и поиск партнёров / 한-러 통번역 · 현지 파트너 발굴">
+<style>
+:root{--bg:#0b1020;--fg:#f4f6ff;--mute:#aab3d6;--a:#5b8cff;--b:#ff5b8c;--card:rgba(255,255,255,.07)}
+*{box-sizing:border-box;margin:0}
+body{font-family:system-ui,-apple-system,"Segoe UI","Malgun Gothic",sans-serif;background:var(--bg);color:var(--fg);min-height:100vh;overflow-x:hidden;line-height:1.55}
+/* motion: drifting blobs + floating words */
+.blob{position:fixed;border-radius:50%;filter:blur(70px);opacity:.55;z-index:-1;animation:drift 18s ease-in-out infinite alternate}
+.b1{width:60vmax;height:60vmax;background:var(--a);top:-20vmax;left:-15vmax}
+.b2{width:50vmax;height:50vmax;background:var(--b);bottom:-18vmax;right:-12vmax;animation-delay:-9s}
+@keyframes drift{to{transform:translate(8vmax,6vmax) scale(1.15)}}
+.float{position:fixed;z-index:-1;font-weight:700;color:rgba(255,255,255,.07);font-size:clamp(2rem,9vw,5rem);white-space:nowrap;animation:fl 14s ease-in-out infinite alternate}
+.f1{top:12%;left:4%}.f2{top:55%;right:4%;animation-delay:-7s}
+@keyframes fl{to{transform:translateY(-30px) rotate(-3deg)}}
+main{max-width:640px;margin:0 auto;padding:20px 16px 48px}
+.lang{display:flex;justify-content:flex-end;gap:6px}
+.lang button{background:var(--card);color:var(--fg);border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:8px 16px;font-size:.9rem;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--fg);color:var(--bg)}
+header{text-align:center;padding:48px 0 28px}
+.logo{display:inline-flex;gap:10px;align-items:center;font-size:1.6rem;font-weight:800;letter-spacing:.05em;margin-bottom:18px}
+.logo i{font-style:normal;display:inline-block;animation:swap 3s ease-in-out infinite}
+.logo i:nth-child(3){animation-delay:-1.5s}
+@keyframes swap{50%{transform:translateY(-6px);color:var(--b)}}
+h1{font-size:clamp(1.8rem,7vw,2.6rem);line-height:1.2}
+.sub{color:var(--mute);margin-top:12px}
+.card{background:var(--card);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:18px 20px;margin-top:14px;backdrop-filter:blur(8px)}
+.card h2{font-size:1.1rem;margin-bottom:4px}
+.card p{color:var(--mute);font-size:.95rem}
+.contact{display:grid;gap:10px;margin-top:22px}
+.btn{display:block;text-align:center;text-decoration:none;color:#fff;font-weight:600;padding:15px;border-radius:14px;background:linear-gradient(90deg,var(--a),var(--b));background-size:200% 100%;animation:sh 5s linear infinite alternate}
+.btn.alt{background:var(--card);border:1px solid rgba(255,255,255,.25)}
+@keyframes sh{to{background-position:100% 0}}
+.rv{opacity:0;transform:translateY(24px);transition:.7s}
+.rv.on{opacity:1;transform:none}
+[data-l]{display:none}
+html[lang=ru] [data-l=ru],html[lang=ko] [data-l=ko]{display:revert}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div>
+<div class="float f1">안녕</div><div class="float f2">Привет</div>
+<main>
+  <div class="lang">
+    <button data-set="ru" aria-pressed="true">RU</button>
+    <button data-set="ko" aria-pressed="false">한국어</button>
+  </div>
+  <header class="rv">
+    <div class="logo"><i>РУ</i><span>⇄</span><i>KR</i></div>
+    <h1><span data-l="ru">Medintseva Yulia</span><span data-l="ko">메딘트세바 율리아</span></h1>
+    <p class="sub"><span data-l="ru">Устный и письменный перевод русский ⇄ корейский. Поиск надёжных партнёров.</span><span data-l="ko">한국어 ⇄ 러시아어 통번역, 신뢰할 수 있는 현지 파트너 발굴.</span></p>
+  </header>
+
+  <section class="card rv"><h2><span data-l="ru">Устный и письменный перевод</span><span data-l="ko">통역 · 번역</span></h2>
+    <p><span data-l="ru">Переговоры, встречи, выставки, документы и договоры.</span><span data-l="ko">협상, 미팅, 전시회 통역과 문서·계약서 번역.</span></p></section>
+  <section class="card rv"><h2><span data-l="ru">Поиск партнёров в России и СНГ</span><span data-l="ko">현지 파트너 발굴</span></h2>
+    <p><span data-l="ru">Находим и проверяем поставщиков, дистрибьюторов и покупателей.</span><span data-l="ko">공급사, 유통사, 바이어를 찾고 검증해 연결합니다.</span></p></section>
+  <section class="card rv"><h2><span data-l="ru">Сопровождение</span><span data-l="ko">출장·행사 동행</span></h2>
+    <p><span data-l="ru">Поддержка в командировках и на мероприятиях на месте.</span><span data-l="ko">현지 출장과 행사에서 현장 지원.</span></p></section>
+
+  <div class="contact rv">
+    <a class="btn" href="https://t.me/+821066235716">Telegram</a>
+    <a class="btn" href="https://wa.me/821066235716">WhatsApp</a>
+    <a class="btn alt" href="tel:+821066235716">+82 10-6623-5716</a>
+    <a class="btn alt" href="mailto:skmedium2@gmail.com">skmedium2@gmail.com</a>
+    <a class="btn alt" href="https://skmedium.com">skmedium.com</a>
+    <a class="btn alt" href="https://instagram.com/sk_medium">Instagram @sk_medium</a>
+  </div>
+</main>
+<script>
+const set=l=>{document.documentElement.lang=l;document.querySelectorAll('[data-set]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.set===l));try{localStorage.l=l}catch(e){}};
+document.querySelectorAll('[data-set]').forEach(b=>b.onclick=()=>set(b.dataset.set));
+try{if(localStorage.l)set(localStorage.l)}catch(e){}
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('on')),{threshold:.15});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=i*80+'ms';io.observe(el)});
+</script>
+</body>
+</html>
