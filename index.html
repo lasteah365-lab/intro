@@ -14,7 +14,7 @@ body{font-family:"Pretendard Variable",Pretendard,system-ui,-apple-system,"Segoe
 /* motion: drifting blobs + floating words */
 .blob{position:fixed;border-radius:50%;filter:blur(70px);opacity:.32;z-index:-1;animation:drift 18s ease-in-out infinite alternate}
 .b1{width:60vmax;height:60vmax;background:var(--a);top:-20vmax;left:-15vmax}
-.b2{width:50vmax;height:50vmax;background:var(--b);bottom:-18vmax;right:-12vmax;animation-delay:-9s}
+.b2{width:50vmax;height:50vmax;background:var(--b);top:calc(58% - 25vmax);right:-12vmax;animation-delay:-9s}
 @keyframes drift{to{transform:translate(8vmax,6vmax) scale(1.15)}}
 .float{position:fixed;z-index:-1;font-weight:700;color:rgba(255,255,255,.07);font-size:clamp(1.6rem,7vw,3.5rem);white-space:nowrap;animation:fl 14s ease-in-out infinite alternate}
 .f1{top:12%;left:4%}.f2{top:55%;right:4%;animation-delay:-7s}
