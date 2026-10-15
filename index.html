@@ -90,16 +90,7 @@ const set=l=>{document.documentElement.lang=l;document.querySelectorAll('[data-s
 document.querySelectorAll('[data-set]').forEach(b=>b.onclick=()=>set(b.dataset.set));
 try{if(localStorage.l)set(localStorage.l)}catch(e){}
 document.getElementById('save').onclick=()=>{
-const v='BEGIN:VCARD
-VERSION:3.0
-N:Medintseva;Yulia;;;
-FN:Yulia Medintseva (메딘트세바 율리아)
-TEL;TYPE=CELL:+821066235716
-EMAIL:skmedium2@gmail.com
-URL:https://skmedium.com
-NOTE:KR-RU interpreter & translator
-END:VCARD
-';
+const v=['BEGIN:VCARD','VERSION:3.0','N:Medintseva;Yulia;;;','FN:Yulia Medintseva (메딘트세바 율리아)','TEL;TYPE=CELL:+821066235716','EMAIL:skmedium2@gmail.com','URL:https://skmedium.com','NOTE:KR-RU interpreter & translator','END:VCARD'].join('\r\n')+'\r\n';
 const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([v],{type:'text/vcard'}));a.download='Yulia-Medintseva.vcf';document.body.appendChild(a);a.click();a.remove()};
 const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('on')),{threshold:.15});
 document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=i*80+'ms';io.observe(el)});
