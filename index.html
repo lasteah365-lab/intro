@@ -40,6 +40,10 @@ h1{font-size:clamp(1.8rem,7vw,2.6rem);line-height:1.2}
 .btn{display:block;text-align:center;text-decoration:none;color:#fff;font-weight:600;padding:15px;border-radius:14px;background:linear-gradient(90deg,var(--a),var(--b));background-size:200% 100%;animation:sh 5s linear infinite alternate}
 .btn.alt{background:var(--card);border:1px solid rgba(255,255,255,.25)}
 @keyframes sh{to{background-position:100% 0}}
+.row{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:8px 8px 8px 16px}
+.num{flex:1;font-weight:600;min-width:0}
+.mini{font:inherit;font-weight:600;color:#fff;text-decoration:none;border:0;border-radius:10px;padding:10px 14px;cursor:pointer;background:linear-gradient(90deg,var(--a),var(--b))}
+button.mini{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3)}
 .rv{opacity:0;transform:translateY(24px);transition:.7s}
 .rv.on{opacity:1;transform:none}
 [data-l]{display:none}
@@ -71,7 +75,11 @@ html[lang=ru] [data-l=ru],html[lang=ko] [data-l=ko]{display:revert}
   <div class="contact rv">
     <a class="btn" href="https://t.me/+821066235716">Telegram</a>
     <a class="btn" href="https://wa.me/821066235716">WhatsApp</a>
-    <a class="btn alt" href="tel:+821066235716">+82 10-6623-5716</a>
+    <div class="row">
+      <span class="num">+82 10-6623-5716</span>
+      <a class="mini" href="tel:+821066235716"><span data-l="ko">통화</span><span data-l="ru">Звонок</span></a>
+      <button class="mini" id="save" type="button"><span data-l="ko">저장</span><span data-l="ru">Сохранить</span></button>
+    </div>
     <a class="btn alt" href="mailto:skmedium2@gmail.com">skmedium2@gmail.com</a>
     <a class="btn alt" href="https://skmedium.com">Website</a>
     <a class="btn alt" href="https://instagram.com/sk_medium">Instagram</a>
@@ -81,6 +89,18 @@ html[lang=ru] [data-l=ru],html[lang=ko] [data-l=ko]{display:revert}
 const set=l=>{document.documentElement.lang=l;document.querySelectorAll('[data-set]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.set===l));try{localStorage.l=l}catch(e){}};
 document.querySelectorAll('[data-set]').forEach(b=>b.onclick=()=>set(b.dataset.set));
 try{if(localStorage.l)set(localStorage.l)}catch(e){}
+document.getElementById('save').onclick=()=>{
+const v='BEGIN:VCARD
+VERSION:3.0
+N:Medintseva;Yulia;;;
+FN:Yulia Medintseva (메딘트세바 율리아)
+TEL;TYPE=CELL:+821066235716
+EMAIL:skmedium2@gmail.com
+URL:https://skmedium.com
+NOTE:KR-RU interpreter & translator
+END:VCARD
+';
+const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([v],{type:'text/vcard'}));a.download='Yulia-Medintseva.vcf';document.body.appendChild(a);a.click();a.remove()};
 const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('on')),{threshold:.15});
 document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=i*80+'ms';io.observe(el)});
 </script>
